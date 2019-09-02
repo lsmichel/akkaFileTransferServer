@@ -51,6 +51,12 @@ public abstract class FileTransfertManagerClient extends FileTransfertManagerCli
       }
     
   
+    
+      private final SingleResponseRequestBuilder<sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed> postFileinfoRequestBuilder(scala.concurrent.Future<ManagedChannel> channel){
+        return new JavaUnaryRequestBuilder<>(postFileinfoDescriptor, channel, options, settings, ec);
+      }
+    
+  
 
       
 
@@ -73,6 +79,25 @@ public abstract class FileTransfertManagerClient extends FileTransfertManagerCli
         }
       
 
+        /**
+         * For access to method metadata use the parameterless version of postFileinfo
+         */
+        public java.util.concurrent.CompletionStage<sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed> postFileinfo(sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo request) {
+          return postFileinfo().invoke(request);
+        }
+
+        /**
+         * Lower level "lifted" version of the method, giving access to request metadata etc.
+         * prefer postFileinfo(sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo) if possible.
+         */
+        
+          public SingleResponseRequestBuilder<sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed> postFileinfo()
+        
+        {
+          return clientState.withChannel( this::postFileinfoRequestBuilder);
+        }
+      
+
       
         private static MethodDescriptor<sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed> postFileDescriptor =
           MethodDescriptor.<sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed>newBuilder()
@@ -85,6 +110,20 @@ public abstract class FileTransfertManagerClient extends FileTransfertManagerCli
             .setFullMethodName(MethodDescriptor.generateFullMethodName("FileTransfertManager.FileTransfertManager", "PostFile"))
             .setRequestMarshaller(new ProtoMarshaller<sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart>(filePartSerializer))
             .setResponseMarshaller(new ProtoMarshaller<sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed>(PostFileActionPerformedSerializer))
+            .setSampledToLocalTracing(true)
+            .build();
+        
+        private static MethodDescriptor<sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed> postFileinfoDescriptor =
+          MethodDescriptor.<sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed>newBuilder()
+            .setType(
+   MethodDescriptor.MethodType.UNARY 
+  
+  
+  
+)
+            .setFullMethodName(MethodDescriptor.generateFullMethodName("FileTransfertManager.FileTransfertManager", "PostFileinfo"))
+            .setRequestMarshaller(new ProtoMarshaller<sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo>(fileInfoSerializer))
+            .setResponseMarshaller(new ProtoMarshaller<sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed>(PostFileInfoActionPerformedSerializer))
             .setSampledToLocalTracing(true)
             .build();
         

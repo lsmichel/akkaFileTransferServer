@@ -4,18 +4,18 @@
 package sn.atos.wordline.nsbf.filetranfertgrpc.srv;
 
 /**
- * Protobuf type {@code FileTransfertManager.PostFileActionPerformed}
+ * Protobuf type {@code FileTransfertManager.PostFileInfoActionPerformed}
  */
-public  final class PostFileActionPerformed extends
+public  final class PostFileInfoActionPerformed extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:FileTransfertManager.PostFileActionPerformed)
-    PostFileActionPerformedOrBuilder {
+    // @@protoc_insertion_point(message_implements:FileTransfertManager.PostFileInfoActionPerformed)
+    PostFileInfoActionPerformedOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use PostFileActionPerformed.newBuilder() to construct.
-  private PostFileActionPerformed(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use PostFileInfoActionPerformed.newBuilder() to construct.
+  private PostFileInfoActionPerformed(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private PostFileActionPerformed() {
+  private PostFileInfoActionPerformed() {
     errorMessage_ = "";
     hasError_ = false;
     message_ = "";
@@ -26,7 +26,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private PostFileActionPerformed(
+  private PostFileInfoActionPerformed(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -83,14 +83,14 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileActionPerformed_descriptor;
+    return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileInfoActionPerformed_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileActionPerformed_fieldAccessorTable
+    return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileInfoActionPerformed_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.class, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.Builder.class);
+            sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed.class, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed.Builder.class);
   }
 
   public static final int ERRORMESSAGE_FIELD_NUMBER = 1;
@@ -219,10 +219,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed)) {
+    if (!(obj instanceof sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed)) {
       return super.equals(obj);
     }
-    sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed other = (sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed) obj;
+    sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed other = (sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed) obj;
 
     boolean result = true;
     result = result && getErrorMessage()
@@ -254,69 +254,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(byte[] data)
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(java.io.InputStream input)
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseDelimitedFrom(java.io.InputStream input)
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseDelimitedFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -328,7 +328,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed prototype) {
+  public static Builder newBuilder(sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -343,25 +343,25 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code FileTransfertManager.PostFileActionPerformed}
+   * Protobuf type {@code FileTransfertManager.PostFileInfoActionPerformed}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:FileTransfertManager.PostFileActionPerformed)
-      sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformedOrBuilder {
+      // @@protoc_insertion_point(builder_implements:FileTransfertManager.PostFileInfoActionPerformed)
+      sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformedOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileActionPerformed_descriptor;
+      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileInfoActionPerformed_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileActionPerformed_fieldAccessorTable
+      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileInfoActionPerformed_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.class, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.Builder.class);
+              sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed.class, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed.Builder.class);
     }
 
-    // Construct using sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.newBuilder()
+    // Construct using sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -389,23 +389,23 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileActionPerformed_descriptor;
+      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileInfoActionPerformed_descriptor;
     }
 
-    public sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed getDefaultInstanceForType() {
-      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.getDefaultInstance();
+    public sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed getDefaultInstanceForType() {
+      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed.getDefaultInstance();
     }
 
-    public sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed build() {
-      sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed result = buildPartial();
+    public sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed build() {
+      sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed buildPartial() {
-      sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed result = new sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed(this);
+    public sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed buildPartial() {
+      sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed result = new sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed(this);
       result.errorMessage_ = errorMessage_;
       result.hasError_ = hasError_;
       result.message_ = message_;
@@ -440,16 +440,16 @@ private static final long serialVersionUID = 0L;
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed) {
-        return mergeFrom((sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed)other);
+      if (other instanceof sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed) {
+        return mergeFrom((sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed other) {
-      if (other == sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.getDefaultInstance()) return this;
+    public Builder mergeFrom(sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed other) {
+      if (other == sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed.getDefaultInstance()) return this;
       if (!other.getErrorMessage().isEmpty()) {
         errorMessage_ = other.errorMessage_;
         onChanged();
@@ -474,11 +474,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parsedMessage = null;
+      sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed) e.getUnfinishedMessage();
+        parsedMessage = (sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -662,39 +662,39 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:FileTransfertManager.PostFileActionPerformed)
+    // @@protoc_insertion_point(builder_scope:FileTransfertManager.PostFileInfoActionPerformed)
   }
 
-  // @@protoc_insertion_point(class_scope:FileTransfertManager.PostFileActionPerformed)
-  private static final sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:FileTransfertManager.PostFileInfoActionPerformed)
+  private static final sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed();
+    DEFAULT_INSTANCE = new sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed();
   }
 
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed getDefaultInstance() {
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<PostFileActionPerformed>
-      PARSER = new com.google.protobuf.AbstractParser<PostFileActionPerformed>() {
-    public PostFileActionPerformed parsePartialFrom(
+  private static final com.google.protobuf.Parser<PostFileInfoActionPerformed>
+      PARSER = new com.google.protobuf.AbstractParser<PostFileInfoActionPerformed>() {
+    public PostFileInfoActionPerformed parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PostFileActionPerformed(input, extensionRegistry);
+      return new PostFileInfoActionPerformed(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<PostFileActionPerformed> parser() {
+  public static com.google.protobuf.Parser<PostFileInfoActionPerformed> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<PostFileActionPerformed> getParserForType() {
+  public com.google.protobuf.Parser<PostFileInfoActionPerformed> getParserForType() {
     return PARSER;
   }
 
-  public sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed getDefaultInstanceForType() {
+  public sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

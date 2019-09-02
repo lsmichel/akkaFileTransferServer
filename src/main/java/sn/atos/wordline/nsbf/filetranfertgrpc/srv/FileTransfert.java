@@ -20,10 +20,20 @@ public final class FileTransfert {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_FileTransfertManager_filePart_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_FileTransfertManager_fileInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_FileTransfertManager_fileInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_FileTransfertManager_PostFileActionPerformed_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_FileTransfertManager_PostFileActionPerformed_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_FileTransfertManager_PostFileInfoActionPerformed_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_FileTransfertManager_PostFileInfoActionPerformed_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33,15 +43,24 @@ public final class FileTransfert {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\nproj.proto\022\024FileTransfertManager\"\031\n\010fi" +
-      "lePart\022\r\n\005chunk\030\001 \001(\014\"R\n\027PostFileActionP" +
-      "erformed\022\024\n\014errorMessage\030\001 \001(\t\022\020\n\010hasErr" +
-      "or\030\002 \001(\010\022\017\n\007message\030\003 \001(\t2s\n\024FileTransfe" +
-      "rtManager\022[\n\010PostFile\022\036.FileTransfertMan" +
-      "ager.filePart\032-.FileTransfertManager.Pos" +
-      "tFileActionPerformed\"\000B=\n*sn.atos.wordli" +
-      "ne.nsbf.filetranfertgrpc.srvB\rFileTransf" +
-      "ertP\001b\006proto3"
+      "\n\nproj.proto\022\024FileTransfertManager\"b\n\010fi" +
+      "lePart\022\r\n\005chunk\030\001 \001(\014\022\020\n\010fileName\030\002 \001(\t\022" +
+      "\014\n\004zise\030\003 \001(\t\022\022\n\nblocNumber\030\004 \001(\005\022\023\n\013ide" +
+      "ntifiant\030\005 \001(\t\"X\n\010fileInfo\022\023\n\013identifian" +
+      "t\030\001 \001(\t\022\014\n\004size\030\002 \001(\005\022\020\n\010fileName\030\003 \001(\t\022" +
+      "\027\n\017totalblocNumber\030\004 \001(\005\"R\n\027PostFileActi" +
+      "onPerformed\022\024\n\014errorMessage\030\001 \001(\t\022\020\n\010has" +
+      "Error\030\002 \001(\010\022\017\n\007message\030\003 \001(\t\"V\n\033PostFile" +
+      "InfoActionPerformed\022\024\n\014errorMessage\030\001 \001(" +
+      "\t\022\020\n\010hasError\030\002 \001(\010\022\017\n\007message\030\003 \001(\t2\330\001\n" +
+      "\024FileTransfertManager\022[\n\010PostFile\022\036.File" +
+      "TransfertManager.filePart\032-.FileTransfer" +
+      "tManager.PostFileActionPerformed\"\000\022c\n\014Po" +
+      "stFileinfo\022\036.FileTransfertManager.fileIn" +
+      "fo\0321.FileTransfertManager.PostFileInfoAc" +
+      "tionPerformed\"\000B=\n*sn.atos.wordline.nsbf" +
+      ".filetranfertgrpc.srvB\rFileTransfertP\001b\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -60,12 +79,24 @@ public final class FileTransfert {
     internal_static_FileTransfertManager_filePart_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_FileTransfertManager_filePart_descriptor,
-        new java.lang.String[] { "Chunk", });
-    internal_static_FileTransfertManager_PostFileActionPerformed_descriptor =
+        new java.lang.String[] { "Chunk", "FileName", "Zise", "BlocNumber", "Identifiant", });
+    internal_static_FileTransfertManager_fileInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_FileTransfertManager_fileInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_FileTransfertManager_fileInfo_descriptor,
+        new java.lang.String[] { "Identifiant", "Size", "FileName", "TotalblocNumber", });
+    internal_static_FileTransfertManager_PostFileActionPerformed_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_FileTransfertManager_PostFileActionPerformed_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_FileTransfertManager_PostFileActionPerformed_descriptor,
+        new java.lang.String[] { "ErrorMessage", "HasError", "Message", });
+    internal_static_FileTransfertManager_PostFileInfoActionPerformed_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_FileTransfertManager_PostFileInfoActionPerformed_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_FileTransfertManager_PostFileInfoActionPerformed_descriptor,
         new java.lang.String[] { "ErrorMessage", "HasError", "Message", });
   }
 

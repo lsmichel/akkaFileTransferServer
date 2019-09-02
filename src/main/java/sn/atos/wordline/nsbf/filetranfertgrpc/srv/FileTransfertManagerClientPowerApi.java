@@ -19,4 +19,15 @@ public abstract class FileTransfertManagerClientPowerApi {
         throw new java.lang.UnsupportedOperationException();
     }
   
+    /**
+     * Lower level "lifted" version of the method, giving access to request metadata etc.
+     * prefer postFileinfo(sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo) if possible.
+     */
+    
+      public SingleResponseRequestBuilder<sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed> postFileinfo()
+    
+    {
+        throw new java.lang.UnsupportedOperationException();
+    }
+  
 }

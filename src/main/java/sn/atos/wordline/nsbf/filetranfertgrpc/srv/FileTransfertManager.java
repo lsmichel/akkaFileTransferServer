@@ -11,6 +11,9 @@ public interface FileTransfertManager {
   
   java.util.concurrent.CompletionStage<sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed> postFile(sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart in);
   
+  
+  java.util.concurrent.CompletionStage<sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed> postFileinfo(sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo in);
+  
 
   static String name = "FileTransfertManager.FileTransfertManager";
 
@@ -18,7 +21,11 @@ public interface FileTransfertManager {
     
       public static ProtobufSerializer<sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart> filePartSerializer = new GoogleProtobufSerializer<>(sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart.class);
     
+      public static ProtobufSerializer<sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo> fileInfoSerializer = new GoogleProtobufSerializer<>(sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo.class);
+    
       public static ProtobufSerializer<sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed> PostFileActionPerformedSerializer = new GoogleProtobufSerializer<>(sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.class);
+    
+      public static ProtobufSerializer<sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed> PostFileInfoActionPerformedSerializer = new GoogleProtobufSerializer<>(sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileInfoActionPerformed.class);
     
   }
 }

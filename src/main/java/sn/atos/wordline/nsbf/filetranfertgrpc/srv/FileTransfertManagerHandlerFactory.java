@@ -118,6 +118,11 @@ import static sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfertManager.Se
             .thenCompose(e -> implementation.postFile(e))
             .thenApply(e -> GrpcMarshalling.marshal(e, PostFileActionPerformedSerializer, mat, responseCodec, system, package$.MODULE$.scalaAnonymousPartialFunction(eHandler)));
         
+        case "PostFileinfo":
+          return GrpcMarshalling.unmarshal(request, fileInfoSerializer, mat)
+            .thenCompose(e -> implementation.postFileinfo(e))
+            .thenApply(e -> GrpcMarshalling.marshal(e, PostFileInfoActionPerformedSerializer, mat, responseCodec, system, package$.MODULE$.scalaAnonymousPartialFunction(eHandler)));
+        
         default:
           CompletableFuture<HttpResponse> result = new CompletableFuture<>();
           result.completeExceptionally(new UnsupportedOperationException("Not implemented: " + method));

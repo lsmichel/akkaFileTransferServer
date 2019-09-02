@@ -17,6 +17,10 @@ private static final long serialVersionUID = 0L;
   }
   private filePart() {
     chunk_ = com.google.protobuf.ByteString.EMPTY;
+    fileName_ = "";
+    zise_ = "";
+    blocNumber_ = 0;
+    identifiant_ = "";
   }
 
   @java.lang.Override
@@ -55,6 +59,29 @@ private static final long serialVersionUID = 0L;
             chunk_ = input.readBytes();
             break;
           }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            fileName_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            zise_ = s;
+            break;
+          }
+          case 32: {
+
+            blocNumber_ = input.readInt32();
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            identifiant_ = s;
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -75,7 +102,8 @@ private static final long serialVersionUID = 0L;
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_filePart_fieldAccessorTable
-        .ensureFieldAccessorsInitialized(sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart.class, sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart.Builder.class);
+        .ensureFieldAccessorsInitialized(
+            sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart.class, sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart.Builder.class);
   }
 
   public static final int CHUNK_FIELD_NUMBER = 1;
@@ -85,6 +113,117 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.ByteString getChunk() {
     return chunk_;
+  }
+
+  public static final int FILENAME_FIELD_NUMBER = 2;
+  private volatile java.lang.Object fileName_;
+  /**
+   * <code>string fileName = 2;</code>
+   */
+  public java.lang.String getFileName() {
+    java.lang.Object ref = fileName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      fileName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string fileName = 2;</code>
+   */
+  public com.google.protobuf.ByteString
+      getFileNameBytes() {
+    java.lang.Object ref = fileName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      fileName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ZISE_FIELD_NUMBER = 3;
+  private volatile java.lang.Object zise_;
+  /**
+   * <code>string zise = 3;</code>
+   */
+  public java.lang.String getZise() {
+    java.lang.Object ref = zise_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      zise_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string zise = 3;</code>
+   */
+  public com.google.protobuf.ByteString
+      getZiseBytes() {
+    java.lang.Object ref = zise_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      zise_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int BLOCNUMBER_FIELD_NUMBER = 4;
+  private int blocNumber_;
+  /**
+   * <code>int32 blocNumber = 4;</code>
+   */
+  public int getBlocNumber() {
+    return blocNumber_;
+  }
+
+  public static final int IDENTIFIANT_FIELD_NUMBER = 5;
+  private volatile java.lang.Object identifiant_;
+  /**
+   * <code>string identifiant = 5;</code>
+   */
+  public java.lang.String getIdentifiant() {
+    java.lang.Object ref = identifiant_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      identifiant_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string identifiant = 5;</code>
+   */
+  public com.google.protobuf.ByteString
+      getIdentifiantBytes() {
+    java.lang.Object ref = identifiant_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      identifiant_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -102,6 +241,18 @@ private static final long serialVersionUID = 0L;
     if (!chunk_.isEmpty()) {
       output.writeBytes(1, chunk_);
     }
+    if (!getFileNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fileName_);
+    }
+    if (!getZiseBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, zise_);
+    }
+    if (blocNumber_ != 0) {
+      output.writeInt32(4, blocNumber_);
+    }
+    if (!getIdentifiantBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, identifiant_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -113,6 +264,19 @@ private static final long serialVersionUID = 0L;
     if (!chunk_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(1, chunk_);
+    }
+    if (!getFileNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fileName_);
+    }
+    if (!getZiseBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, zise_);
+    }
+    if (blocNumber_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, blocNumber_);
+    }
+    if (!getIdentifiantBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, identifiant_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -127,11 +291,19 @@ private static final long serialVersionUID = 0L;
     if (!(obj instanceof sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart)) {
       return super.equals(obj);
     }
-        sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart other = (sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart) obj;
+    sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart other = (sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart) obj;
 
     boolean result = true;
     result = result && getChunk()
         .equals(other.getChunk());
+    result = result && getFileName()
+        .equals(other.getFileName());
+    result = result && getZise()
+        .equals(other.getZise());
+    result = result && (getBlocNumber()
+        == other.getBlocNumber());
+    result = result && getIdentifiant()
+        .equals(other.getIdentifiant());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -145,6 +317,14 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + CHUNK_FIELD_NUMBER;
     hash = (53 * hash) + getChunk().hashCode();
+    hash = (37 * hash) + FILENAME_FIELD_NUMBER;
+    hash = (53 * hash) + getFileName().hashCode();
+    hash = (37 * hash) + ZISE_FIELD_NUMBER;
+    hash = (53 * hash) + getZise().hashCode();
+    hash = (37 * hash) + BLOCNUMBER_FIELD_NUMBER;
+    hash = (53 * hash) + getBlocNumber();
+    hash = (37 * hash) + IDENTIFIANT_FIELD_NUMBER;
+    hash = (53 * hash) + getIdentifiant().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -253,7 +433,8 @@ private static final long serialVersionUID = 0L;
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_filePart_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart.class, sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart.class, sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart.Builder.class);
     }
 
     // Construct using sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart.newBuilder()
@@ -275,6 +456,14 @@ private static final long serialVersionUID = 0L;
       super.clear();
       chunk_ = com.google.protobuf.ByteString.EMPTY;
 
+      fileName_ = "";
+
+      zise_ = "";
+
+      blocNumber_ = 0;
+
+      identifiant_ = "";
+
       return this;
     }
 
@@ -288,7 +477,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart build() {
-            sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart result = buildPartial();
+      sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -296,8 +485,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart buildPartial() {
-            sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart result = new sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart(this);
+      sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart result = new sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart(this);
       result.chunk_ = chunk_;
+      result.fileName_ = fileName_;
+      result.zise_ = zise_;
+      result.blocNumber_ = blocNumber_;
+      result.identifiant_ = identifiant_;
       onBuilt();
       return result;
     }
@@ -342,6 +535,21 @@ private static final long serialVersionUID = 0L;
       if (other.getChunk() != com.google.protobuf.ByteString.EMPTY) {
         setChunk(other.getChunk());
       }
+      if (!other.getFileName().isEmpty()) {
+        fileName_ = other.fileName_;
+        onChanged();
+      }
+      if (!other.getZise().isEmpty()) {
+        zise_ = other.zise_;
+        onChanged();
+      }
+      if (other.getBlocNumber() != 0) {
+        setBlocNumber(other.getBlocNumber());
+      }
+      if (!other.getIdentifiant().isEmpty()) {
+        identifiant_ = other.identifiant_;
+        onChanged();
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -355,7 +563,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-            sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart parsedMessage = null;
+      sn.atos.wordline.nsbf.filetranfertgrpc.srv.filePart parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -394,6 +602,239 @@ private static final long serialVersionUID = 0L;
     public Builder clearChunk() {
       
       chunk_ = getDefaultInstance().getChunk();
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object fileName_ = "";
+    /**
+     * <code>string fileName = 2;</code>
+     */
+    public java.lang.String getFileName() {
+      java.lang.Object ref = fileName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fileName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string fileName = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFileNameBytes() {
+      java.lang.Object ref = fileName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fileName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string fileName = 2;</code>
+     */
+    public Builder setFileName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      fileName_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string fileName = 2;</code>
+     */
+    public Builder clearFileName() {
+      
+      fileName_ = getDefaultInstance().getFileName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string fileName = 2;</code>
+     */
+    public Builder setFileNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      fileName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object zise_ = "";
+    /**
+     * <code>string zise = 3;</code>
+     */
+    public java.lang.String getZise() {
+      java.lang.Object ref = zise_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        zise_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string zise = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getZiseBytes() {
+      java.lang.Object ref = zise_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        zise_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string zise = 3;</code>
+     */
+    public Builder setZise(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      zise_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string zise = 3;</code>
+     */
+    public Builder clearZise() {
+      
+      zise_ = getDefaultInstance().getZise();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string zise = 3;</code>
+     */
+    public Builder setZiseBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      zise_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int blocNumber_ ;
+    /**
+     * <code>int32 blocNumber = 4;</code>
+     */
+    public int getBlocNumber() {
+      return blocNumber_;
+    }
+    /**
+     * <code>int32 blocNumber = 4;</code>
+     */
+    public Builder setBlocNumber(int value) {
+      
+      blocNumber_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 blocNumber = 4;</code>
+     */
+    public Builder clearBlocNumber() {
+      
+      blocNumber_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object identifiant_ = "";
+    /**
+     * <code>string identifiant = 5;</code>
+     */
+    public java.lang.String getIdentifiant() {
+      java.lang.Object ref = identifiant_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        identifiant_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string identifiant = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdentifiantBytes() {
+      java.lang.Object ref = identifiant_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        identifiant_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string identifiant = 5;</code>
+     */
+    public Builder setIdentifiant(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      identifiant_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string identifiant = 5;</code>
+     */
+    public Builder clearIdentifiant() {
+      
+      identifiant_ = getDefaultInstance().getIdentifiant();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string identifiant = 5;</code>
+     */
+    public Builder setIdentifiantBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      identifiant_ = value;
       onChanged();
       return this;
     }

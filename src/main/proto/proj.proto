@@ -6,13 +6,31 @@ option java_outer_classname = "FileTransfert";
 package FileTransfertManager;
 
 service FileTransfertManager {
-	 rpc PostFile (filePart) returns (PostFileActionPerformed) {}
+	     rpc PostFile (filePart) returns (PostFileActionPerformed) {}
+             rpc PostFileinfo (fileInfo) returns (PostFileInfoActionPerformed) {}
 }
 message filePart {
 	bytes chunk = 1;
+	string fileName=2;
+	string zise=3;
+        int32  blocNumber=4;
+	string identifiant = 5;
+}
+
+message fileInfo {
+	string identifiant = 1;
+	int32  size=2;
+	string fileName=3;
+    int32  totalblocNumber=4;
 }
 
 message PostFileActionPerformed {
+	string errorMessage=1;
+	bool hasError= 2;
+	string message=3;
+}
+
+message PostFileInfoActionPerformed {
 	string errorMessage=1;
 	bool hasError= 2;
 	string message=3;

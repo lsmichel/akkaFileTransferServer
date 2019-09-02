@@ -4,21 +4,22 @@
 package sn.atos.wordline.nsbf.filetranfertgrpc.srv;
 
 /**
- * Protobuf type {@code FileTransfertManager.PostFileActionPerformed}
+ * Protobuf type {@code FileTransfertManager.fileInfo}
  */
-public  final class PostFileActionPerformed extends
+public  final class fileInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:FileTransfertManager.PostFileActionPerformed)
-    PostFileActionPerformedOrBuilder {
+    // @@protoc_insertion_point(message_implements:FileTransfertManager.fileInfo)
+    fileInfoOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use PostFileActionPerformed.newBuilder() to construct.
-  private PostFileActionPerformed(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use fileInfo.newBuilder() to construct.
+  private fileInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private PostFileActionPerformed() {
-    errorMessage_ = "";
-    hasError_ = false;
-    message_ = "";
+  private fileInfo() {
+    identifiant_ = "";
+    size_ = 0;
+    fileName_ = "";
+    totalblocNumber_ = 0;
   }
 
   @java.lang.Override
@@ -26,7 +27,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private PostFileActionPerformed(
+  private fileInfo(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -55,18 +56,23 @@ private static final long serialVersionUID = 0L;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            errorMessage_ = s;
+            identifiant_ = s;
             break;
           }
           case 16: {
 
-            hasError_ = input.readBool();
+            size_ = input.readInt32();
             break;
           }
           case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            message_ = s;
+            fileName_ = s;
+            break;
+          }
+          case 32: {
+
+            totalblocNumber_ = input.readInt32();
             break;
           }
         }
@@ -83,91 +89,100 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileActionPerformed_descriptor;
+    return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_fileInfo_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileActionPerformed_fieldAccessorTable
+    return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_fileInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.class, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.Builder.class);
+            sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo.class, sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo.Builder.class);
   }
 
-  public static final int ERRORMESSAGE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object errorMessage_;
+  public static final int IDENTIFIANT_FIELD_NUMBER = 1;
+  private volatile java.lang.Object identifiant_;
   /**
-   * <code>string errorMessage = 1;</code>
+   * <code>string identifiant = 1;</code>
    */
-  public java.lang.String getErrorMessage() {
-    java.lang.Object ref = errorMessage_;
+  public java.lang.String getIdentifiant() {
+    java.lang.Object ref = identifiant_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      errorMessage_ = s;
+      identifiant_ = s;
       return s;
     }
   }
   /**
-   * <code>string errorMessage = 1;</code>
+   * <code>string identifiant = 1;</code>
    */
   public com.google.protobuf.ByteString
-      getErrorMessageBytes() {
-    java.lang.Object ref = errorMessage_;
+      getIdentifiantBytes() {
+    java.lang.Object ref = identifiant_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      errorMessage_ = b;
+      identifiant_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int HASERROR_FIELD_NUMBER = 2;
-  private boolean hasError_;
+  public static final int SIZE_FIELD_NUMBER = 2;
+  private int size_;
   /**
-   * <code>bool hasError = 2;</code>
+   * <code>int32 size = 2;</code>
    */
-  public boolean getHasError() {
-    return hasError_;
+  public int getSize() {
+    return size_;
   }
 
-  public static final int MESSAGE_FIELD_NUMBER = 3;
-  private volatile java.lang.Object message_;
+  public static final int FILENAME_FIELD_NUMBER = 3;
+  private volatile java.lang.Object fileName_;
   /**
-   * <code>string message = 3;</code>
+   * <code>string fileName = 3;</code>
    */
-  public java.lang.String getMessage() {
-    java.lang.Object ref = message_;
+  public java.lang.String getFileName() {
+    java.lang.Object ref = fileName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      message_ = s;
+      fileName_ = s;
       return s;
     }
   }
   /**
-   * <code>string message = 3;</code>
+   * <code>string fileName = 3;</code>
    */
   public com.google.protobuf.ByteString
-      getMessageBytes() {
-    java.lang.Object ref = message_;
+      getFileNameBytes() {
+    java.lang.Object ref = fileName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      message_ = b;
+      fileName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int TOTALBLOCNUMBER_FIELD_NUMBER = 4;
+  private int totalblocNumber_;
+  /**
+   * <code>int32 totalblocNumber = 4;</code>
+   */
+  public int getTotalblocNumber() {
+    return totalblocNumber_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -182,14 +197,17 @@ private static final long serialVersionUID = 0L;
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getErrorMessageBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, errorMessage_);
+    if (!getIdentifiantBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, identifiant_);
     }
-    if (hasError_ != false) {
-      output.writeBool(2, hasError_);
+    if (size_ != 0) {
+      output.writeInt32(2, size_);
     }
-    if (!getMessageBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, message_);
+    if (!getFileNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fileName_);
+    }
+    if (totalblocNumber_ != 0) {
+      output.writeInt32(4, totalblocNumber_);
     }
     unknownFields.writeTo(output);
   }
@@ -199,15 +217,19 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getErrorMessageBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, errorMessage_);
+    if (!getIdentifiantBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, identifiant_);
     }
-    if (hasError_ != false) {
+    if (size_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(2, hasError_);
+        .computeInt32Size(2, size_);
     }
-    if (!getMessageBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, message_);
+    if (!getFileNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fileName_);
+    }
+    if (totalblocNumber_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, totalblocNumber_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -219,18 +241,20 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed)) {
+    if (!(obj instanceof sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo)) {
       return super.equals(obj);
     }
-    sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed other = (sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed) obj;
+    sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo other = (sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo) obj;
 
     boolean result = true;
-    result = result && getErrorMessage()
-        .equals(other.getErrorMessage());
-    result = result && (getHasError()
-        == other.getHasError());
-    result = result && getMessage()
-        .equals(other.getMessage());
+    result = result && getIdentifiant()
+        .equals(other.getIdentifiant());
+    result = result && (getSize()
+        == other.getSize());
+    result = result && getFileName()
+        .equals(other.getFileName());
+    result = result && (getTotalblocNumber()
+        == other.getTotalblocNumber());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -242,81 +266,82 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ERRORMESSAGE_FIELD_NUMBER;
-    hash = (53 * hash) + getErrorMessage().hashCode();
-    hash = (37 * hash) + HASERROR_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getHasError());
-    hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
-    hash = (53 * hash) + getMessage().hashCode();
+    hash = (37 * hash) + IDENTIFIANT_FIELD_NUMBER;
+    hash = (53 * hash) + getIdentifiant().hashCode();
+    hash = (37 * hash) + SIZE_FIELD_NUMBER;
+    hash = (53 * hash) + getSize();
+    hash = (37 * hash) + FILENAME_FIELD_NUMBER;
+    hash = (53 * hash) + getFileName().hashCode();
+    hash = (37 * hash) + TOTALBLOCNUMBER_FIELD_NUMBER;
+    hash = (53 * hash) + getTotalblocNumber();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(byte[] data)
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(java.io.InputStream input)
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseDelimitedFrom(java.io.InputStream input)
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseDelimitedFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parseFrom(
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -328,7 +353,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed prototype) {
+  public static Builder newBuilder(sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -343,25 +368,25 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code FileTransfertManager.PostFileActionPerformed}
+   * Protobuf type {@code FileTransfertManager.fileInfo}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:FileTransfertManager.PostFileActionPerformed)
-      sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformedOrBuilder {
+      // @@protoc_insertion_point(builder_implements:FileTransfertManager.fileInfo)
+      sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileActionPerformed_descriptor;
+      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_fileInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileActionPerformed_fieldAccessorTable
+      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_fileInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.class, sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.Builder.class);
+              sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo.class, sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo.Builder.class);
     }
 
-    // Construct using sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.newBuilder()
+    // Construct using sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -378,37 +403,40 @@ private static final long serialVersionUID = 0L;
     }
     public Builder clear() {
       super.clear();
-      errorMessage_ = "";
+      identifiant_ = "";
 
-      hasError_ = false;
+      size_ = 0;
 
-      message_ = "";
+      fileName_ = "";
+
+      totalblocNumber_ = 0;
 
       return this;
     }
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_PostFileActionPerformed_descriptor;
+      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.FileTransfert.internal_static_FileTransfertManager_fileInfo_descriptor;
     }
 
-    public sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed getDefaultInstanceForType() {
-      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.getDefaultInstance();
+    public sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo getDefaultInstanceForType() {
+      return sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo.getDefaultInstance();
     }
 
-    public sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed build() {
-      sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed result = buildPartial();
+    public sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo build() {
+      sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed buildPartial() {
-      sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed result = new sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed(this);
-      result.errorMessage_ = errorMessage_;
-      result.hasError_ = hasError_;
-      result.message_ = message_;
+    public sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo buildPartial() {
+      sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo result = new sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo(this);
+      result.identifiant_ = identifiant_;
+      result.size_ = size_;
+      result.fileName_ = fileName_;
+      result.totalblocNumber_ = totalblocNumber_;
       onBuilt();
       return result;
     }
@@ -440,26 +468,29 @@ private static final long serialVersionUID = 0L;
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed) {
-        return mergeFrom((sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed)other);
+      if (other instanceof sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo) {
+        return mergeFrom((sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed other) {
-      if (other == sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed.getDefaultInstance()) return this;
-      if (!other.getErrorMessage().isEmpty()) {
-        errorMessage_ = other.errorMessage_;
+    public Builder mergeFrom(sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo other) {
+      if (other == sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo.getDefaultInstance()) return this;
+      if (!other.getIdentifiant().isEmpty()) {
+        identifiant_ = other.identifiant_;
         onChanged();
       }
-      if (other.getHasError() != false) {
-        setHasError(other.getHasError());
+      if (other.getSize() != 0) {
+        setSize(other.getSize());
       }
-      if (!other.getMessage().isEmpty()) {
-        message_ = other.message_;
+      if (!other.getFileName().isEmpty()) {
+        fileName_ = other.fileName_;
         onChanged();
+      }
+      if (other.getTotalblocNumber() != 0) {
+        setTotalblocNumber(other.getTotalblocNumber());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -474,11 +505,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed parsedMessage = null;
+      sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed) e.getUnfinishedMessage();
+        parsedMessage = (sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -488,166 +519,192 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object errorMessage_ = "";
+    private java.lang.Object identifiant_ = "";
     /**
-     * <code>string errorMessage = 1;</code>
+     * <code>string identifiant = 1;</code>
      */
-    public java.lang.String getErrorMessage() {
-      java.lang.Object ref = errorMessage_;
+    public java.lang.String getIdentifiant() {
+      java.lang.Object ref = identifiant_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        errorMessage_ = s;
+        identifiant_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string errorMessage = 1;</code>
+     * <code>string identifiant = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getErrorMessageBytes() {
-      java.lang.Object ref = errorMessage_;
+        getIdentifiantBytes() {
+      java.lang.Object ref = identifiant_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        errorMessage_ = b;
+        identifiant_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string errorMessage = 1;</code>
+     * <code>string identifiant = 1;</code>
      */
-    public Builder setErrorMessage(
+    public Builder setIdentifiant(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      errorMessage_ = value;
+      identifiant_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string errorMessage = 1;</code>
+     * <code>string identifiant = 1;</code>
      */
-    public Builder clearErrorMessage() {
+    public Builder clearIdentifiant() {
       
-      errorMessage_ = getDefaultInstance().getErrorMessage();
+      identifiant_ = getDefaultInstance().getIdentifiant();
       onChanged();
       return this;
     }
     /**
-     * <code>string errorMessage = 1;</code>
+     * <code>string identifiant = 1;</code>
      */
-    public Builder setErrorMessageBytes(
+    public Builder setIdentifiantBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      errorMessage_ = value;
+      identifiant_ = value;
       onChanged();
       return this;
     }
 
-    private boolean hasError_ ;
+    private int size_ ;
     /**
-     * <code>bool hasError = 2;</code>
+     * <code>int32 size = 2;</code>
      */
-    public boolean getHasError() {
-      return hasError_;
+    public int getSize() {
+      return size_;
     }
     /**
-     * <code>bool hasError = 2;</code>
+     * <code>int32 size = 2;</code>
      */
-    public Builder setHasError(boolean value) {
+    public Builder setSize(int value) {
       
-      hasError_ = value;
+      size_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>bool hasError = 2;</code>
+     * <code>int32 size = 2;</code>
      */
-    public Builder clearHasError() {
+    public Builder clearSize() {
       
-      hasError_ = false;
+      size_ = 0;
       onChanged();
       return this;
     }
 
-    private java.lang.Object message_ = "";
+    private java.lang.Object fileName_ = "";
     /**
-     * <code>string message = 3;</code>
+     * <code>string fileName = 3;</code>
      */
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
+    public java.lang.String getFileName() {
+      java.lang.Object ref = fileName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        message_ = s;
+        fileName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string message = 3;</code>
+     * <code>string fileName = 3;</code>
      */
     public com.google.protobuf.ByteString
-        getMessageBytes() {
-      java.lang.Object ref = message_;
+        getFileNameBytes() {
+      java.lang.Object ref = fileName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        message_ = b;
+        fileName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string message = 3;</code>
+     * <code>string fileName = 3;</code>
      */
-    public Builder setMessage(
+    public Builder setFileName(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      message_ = value;
+      fileName_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string message = 3;</code>
+     * <code>string fileName = 3;</code>
      */
-    public Builder clearMessage() {
+    public Builder clearFileName() {
       
-      message_ = getDefaultInstance().getMessage();
+      fileName_ = getDefaultInstance().getFileName();
       onChanged();
       return this;
     }
     /**
-     * <code>string message = 3;</code>
+     * <code>string fileName = 3;</code>
      */
-    public Builder setMessageBytes(
+    public Builder setFileNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      message_ = value;
+      fileName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int totalblocNumber_ ;
+    /**
+     * <code>int32 totalblocNumber = 4;</code>
+     */
+    public int getTotalblocNumber() {
+      return totalblocNumber_;
+    }
+    /**
+     * <code>int32 totalblocNumber = 4;</code>
+     */
+    public Builder setTotalblocNumber(int value) {
+      
+      totalblocNumber_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 totalblocNumber = 4;</code>
+     */
+    public Builder clearTotalblocNumber() {
+      
+      totalblocNumber_ = 0;
       onChanged();
       return this;
     }
@@ -662,39 +719,39 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:FileTransfertManager.PostFileActionPerformed)
+    // @@protoc_insertion_point(builder_scope:FileTransfertManager.fileInfo)
   }
 
-  // @@protoc_insertion_point(class_scope:FileTransfertManager.PostFileActionPerformed)
-  private static final sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:FileTransfertManager.fileInfo)
+  private static final sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed();
+    DEFAULT_INSTANCE = new sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo();
   }
 
-  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed getDefaultInstance() {
+  public static sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<PostFileActionPerformed>
-      PARSER = new com.google.protobuf.AbstractParser<PostFileActionPerformed>() {
-    public PostFileActionPerformed parsePartialFrom(
+  private static final com.google.protobuf.Parser<fileInfo>
+      PARSER = new com.google.protobuf.AbstractParser<fileInfo>() {
+    public fileInfo parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PostFileActionPerformed(input, extensionRegistry);
+      return new fileInfo(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<PostFileActionPerformed> parser() {
+  public static com.google.protobuf.Parser<fileInfo> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<PostFileActionPerformed> getParserForType() {
+  public com.google.protobuf.Parser<fileInfo> getParserForType() {
     return PARSER;
   }
 
-  public sn.atos.wordline.nsbf.filetranfertgrpc.srv.PostFileActionPerformed getDefaultInstanceForType() {
+  public sn.atos.wordline.nsbf.filetranfertgrpc.srv.fileInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
